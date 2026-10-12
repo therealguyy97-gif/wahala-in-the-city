@@ -7,8 +7,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>Wahala in the City</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚌</text></svg>" />
-  <script type="module" crossorigin src="./assets/index-6dy1rrt0.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CWDq6rEf.css">
+  <script type="module" crossorigin src="./assets/index-GPpQL1NG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DNWWXQnA.css">
 </head>
 <body>
   <canvas id="c"></canvas>
@@ -70,20 +70,33 @@
       <h1 class="title">Wahala <span>in the</span> City</h1>
       <p class="tag">Lagos life sim • Make your person, come hustle 🇳🇬</p>
       <label class="field">Name<input id="ccName" maxlength="14" placeholder="Wetin be your name?" /></label>
-      <div class="group"><div class="glabel">Skin tone</div><div class="swatches" id="ccSkin"></div></div>
-      <div class="group"><div class="glabel">Hair / Headwear</div><div class="chips" id="ccHair"></div></div>
-      <div class="group"><div class="glabel">Hair colour</div><div class="swatches small" id="ccHairColor"></div></div>
-      <div class="group"><div class="glabel">Outfit</div><div class="chips" id="ccOutfit"></div></div>
-      <div class="group" id="ccPatternGroup"><div class="glabel">Ankara pattern</div><div class="chips" id="ccPattern"></div></div>
-      <div class="group"><div class="glabel">Cloth colour</div><div class="swatches small" id="ccCloth"></div></div>
-      <div class="group"><div class="glabel">Accent / Gele colour</div><div class="swatches small" id="ccAccent"></div></div>
-      <div class="group"><div class="glabel">Trousers</div><div class="swatches small" id="ccPants"></div></div>
+      <div class="cc-tabs" id="ccTabs"><button data-t="body" class="sel">💪 Body</button><button data-t="look">💇 Look</button><button data-t="fit">👕 Fit</button></div>
+      <div class="tab" data-tab="body">
+        <div class="group"><div class="glabel">Body type</div><div class="chips" id="ccPreset"></div></div>
+        <div class="group" id="ccSliders"></div>
+        <div class="group"><div class="glabel">Skin tone</div><div class="swatches" id="ccSkin"></div></div>
+      </div>
+      <div class="tab hidden" data-tab="look">
+        <div class="group"><div class="glabel">Hair</div><div class="chips" id="ccHair"></div></div>
+        <div class="group"><div class="glabel">Hair colour</div><div class="swatches small" id="ccHairColor"></div></div>
+        <div class="group"><div class="glabel">Headwear</div><div class="chips" id="ccHead"></div><div class="swatches small" id="ccHatCol"></div></div>
+        <div class="group"><div class="glabel">Accessories</div><div class="chips" id="ccAcc"></div></div>
+      </div>
+      <div class="tab hidden" data-tab="fit">
+        <div class="group"><div class="glabel">Top</div><div class="chips" id="ccTop"></div><div class="swatches small" id="ccCloth"></div></div>
+        <div class="group" id="ccPatternGroup"><div class="glabel">Ankara pattern / accent</div><div class="chips" id="ccPattern"></div><div class="swatches small" id="ccAccent"></div></div>
+        <div class="group"><div class="glabel">Bottom</div><div class="chips" id="ccBottom"></div><div class="swatches small" id="ccPants"></div></div>
+        <div class="group"><div class="glabel">Shoes</div><div class="chips" id="ccShoes"></div><div class="swatches small" id="ccShoeCol"></div></div>
+        <div class="group"><div class="glabel">Outerwear</div><div class="chips" id="ccOuter"></div><div class="swatches small" id="ccOuterCol"></div></div>
+        <div class="group"><div class="glabel">Saved outfits</div><div class="chips" id="ccLooks"></div></div>
+        <p class="fine">Starter set only — more drip for sale for <b>Okrika Boutique</b>, Balogun market.</p>
+      </div>
       <div class="cc-actions">
         <button id="ccRandom" class="btn ghost">🎲 Shuffle</button>
         <button id="ccStart" class="btn primary">Start Hustle ➜</button>
       </div>
       <button id="ccNew" class="btn link hidden">Start new life (wipe save)</button>
-      <p class="fine">Starting tier: <b>Lapo</b> — ₦4,000 for pocket, rent ₦8,000 every Saturday. No real money anywhere for this game.</p>
+      <p class="fine">New life: <b>₦1,000,000</b> for pocket. Baba Ade wants ₦600,000 upfront rent by Saturday, then ₦15,000 weekly. No real money anywhere for this game.</p>
     </div>
   </div>
 </body>
