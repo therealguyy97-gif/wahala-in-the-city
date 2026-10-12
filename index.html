@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffd23f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Wahala in the City</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚌</text></svg>" />
+  <script type="module" crossorigin src="./assets/index-CWWWw0eT.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CcIC7wbu.css">
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div id="blackoutTint"></div>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div class="hud-card">
+      <div class="hud-row top">
+        <div class="clock"><span id="hudDay">Mon</span> <b id="hudTime">07:00</b></div>
+        <div id="hudPower" class="power on">💡 NEPA</div>
+      </div>
+      <div class="hud-cash">₦<span id="hudCash">0</span></div>
+      <div class="need"><span class="lbl">🍲 Belle</span><div class="bar"><i id="barHunger"></i></div></div>
+      <div class="need"><span class="lbl">⚡ Body</span><div class="bar"><i id="barEnergy"></i></div></div>
+      <div class="need"><span class="lbl">😊 Mind</span><div class="bar"><i id="barMood"></i></div></div>
+      <div id="hudRent" class="rent-chip">Rent: —</div>
+    </div>
+    <div id="keysHint" class="keys-hint">WASD / arrows move • Shift run • E interact • Q/R or drag to turn camera • scroll zoom • P phone</div>
+  </div>
+
+  <button id="actionBtn" class="hidden"><span class="key">E</span><span id="actionLabel">Interact</span></button>
+  <div id="joystick" class="hidden"><div id="knob"></div></div>
+  <button id="phoneBtn" class="hidden" aria-label="GistMe phone">📱<span id="badge" class="badge hidden">0</span></button>
+
+  <!-- GistMe phone -->
+  <div id="phone" class="hidden">
+    <div class="phone-shell">
+      <div class="phone-notch"></div>
+      <div class="phone-status"><span id="phTime">07:00</span><span id="phPower">💡</span><span>📶 🔋</span></div>
+      <div class="phone-head"><span class="logo">Gist<b>Me</b></span><button id="phoneClose" aria-label="Close">✕</button></div>
+      <div class="phone-tabs">
+        <button data-tab="wallet" class="active">Wallet</button>
+        <button data-tab="feed">Gist <span id="feedBadge"></span></button>
+        <button data-tab="lapo">LapoPay</button>
+      </div>
+      <div class="phone-body" id="phoneBody"></div>
+    </div>
+  </div>
+
+  <div id="modal" class="hidden"><div class="modal-card" id="modalCard"></div></div>
+  <div id="market" class="hidden"></div>
+  <div id="toasts"></div>
+  <div id="fade"></div>
+
+  <!-- Character creator -->
+  <div id="creator">
+    <div class="creator-panel">
+      <h1 class="title">Wahala <span>in the</span> City</h1>
+      <p class="tag">Lagos life sim • Make your person, come hustle 🇳🇬</p>
+      <label class="field">Name<input id="ccName" maxlength="14" placeholder="Wetin be your name?" /></label>
+      <div class="group"><div class="glabel">Skin tone</div><div class="swatches" id="ccSkin"></div></div>
+      <div class="group"><div class="glabel">Hair / Headwear</div><div class="chips" id="ccHair"></div></div>
+      <div class="group"><div class="glabel">Hair colour</div><div class="swatches small" id="ccHairColor"></div></div>
+      <div class="group"><div class="glabel">Outfit</div><div class="chips" id="ccOutfit"></div></div>
+      <div class="group" id="ccPatternGroup"><div class="glabel">Ankara pattern</div><div class="chips" id="ccPattern"></div></div>
+      <div class="group"><div class="glabel">Cloth colour</div><div class="swatches small" id="ccCloth"></div></div>
+      <div class="group"><div class="glabel">Accent / Gele colour</div><div class="swatches small" id="ccAccent"></div></div>
+      <div class="group"><div class="glabel">Trousers</div><div class="swatches small" id="ccPants"></div></div>
+      <div class="cc-actions">
+        <button id="ccRandom" class="btn ghost">🎲 Shuffle</button>
+        <button id="ccStart" class="btn primary">Start Hustle ➜</button>
+      </div>
+      <button id="ccNew" class="btn link hidden">Start new life (wipe save)</button>
+      <p class="fine">Starting tier: <b>Lapo</b> — ₦4,000 for pocket, rent ₦8,000 every Saturday. No real money anywhere for this game.</p>
+    </div>
+  </div>
+</body>
+</html>
