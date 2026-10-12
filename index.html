@@ -7,8 +7,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>Wahala in the City</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚌</text></svg>" />
-  <script type="module" crossorigin src="./assets/index-mivQCCh-.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-FTJfHasC.css">
+  <script type="module" crossorigin src="./assets/index-DsWCOgdG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Dl_O_aWx.css">
 </head>
 <body>
   <canvas id="c"></canvas>
@@ -25,12 +25,19 @@
       <div class="need"><span class="lbl">🍲 Belle</span><div class="bar"><i id="barHunger"></i></div></div>
       <div class="need"><span class="lbl">⚡ Body</span><div class="bar"><i id="barEnergy"></i></div></div>
       <div class="need"><span class="lbl">😊 Mind</span><div class="bar"><i id="barMood"></i></div></div>
+      <div class="chips"><span id="hudKarma" class="chip good">🙏 0</span><span id="hudFollow" class="chip">📸 0</span><span id="hudData" class="chip">📶 0MB</span></div>
+      <div class="status"><span>Lapo</span><div class="mini-bar"><i id="statusFill"></i></div><span>Nepo</span><b id="statusPct">0%</b></div>
       <div id="hudRent" class="rent-chip">Rent: —</div>
     </div>
-    <div id="keysHint" class="keys-hint">WASD / arrows move • Shift run • E interact • Q/R or drag to turn camera • scroll zoom • P phone</div>
+    <div id="keysHint" class="keys-hint">WASD / arrows move • Shift run • E interact • Q/R or drag to turn camera • scroll zoom • P phone • M mute</div>
   </div>
 
   <button id="actionBtn" class="hidden"><span class="key">E</span><span id="actionLabel">Interact</span></button>
+  <div id="actHud" class="hidden"></div>
+  <div id="ctxBtns" class="hidden"></div>
+  <div id="sysBtns" class="hidden"><button id="muteBtn" aria-label="Mute">🔊</button><button id="radioBtn" aria-label="Radio">📻</button></div>
+  <div id="mash" class="hidden"><div class="mash-card"><b id="mashLabel">Push!</b><div class="mini-bar big"><i id="mashFill"></i></div><span id="mashTime">4.0s</span><button id="mashBtn">TAP! 👊</button><small>Tap fast (Space/E)</small></div></div>
+  <div id="flash"></div>
   <div id="joystick" class="hidden"><div id="knob"></div></div>
   <button id="phoneBtn" class="hidden" aria-label="GistMe phone">📱<span id="badge" class="badge hidden">0</span></button>
 
